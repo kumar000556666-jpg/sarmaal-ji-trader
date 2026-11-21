@@ -1,20 +1,82 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sarmaal Ji Trader</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sarmaal Ji Trader — Rahul Kumar's trading journey across NIFTY, BANK NIFTY and Crypto.">
+<title>Sarmaal Ji Trader | Rahul Kumar</title>
 <style>
-body{margin:0;font-family:Arial;background:#0f0f10;color:#fff}
-header{padding:60px;text-align:center;background:linear-gradient(135deg,#111,#222)}
-.btn{display:inline-block;padding:12px 20px;background:#f5c542;color:#111;border-radius:8px;text-decoration:none}
-section{max-width:900px;margin:auto;padding:30px}
-.card{background:#1c1c1c;padding:20px;border-radius:12px;margin:16px 0}
-footer{text-align:center;padding:20px;color:#aaa}
-</style></head><body>
-<header><h1>Sarmaal Ji Trader</h1><p>Rahul Kumar | Trader</p><a class="btn" href="https://instagram.com/market.view00">Instagram</a></header>
-<section>
-<div class="card"><h2>About Me</h2><p>Welcome! I'm Rahul Kumar, also known as <b>Sarmaal Ji Trader</b>. I share trading-related educational content.</p></div>
-<div class="card"><h2>Profile</h2><p><b>Father:</b> Mohinder Kumar<br><b>State:</b> Jammu and Kashmir</p></div>
-<div class="card"><h2>Future Gallery</h2><p>This section is reserved. Later, photos, blogs and trading updates can be added here.</p></div>
-<div class="card"><h2>Contact</h2><p>Instagram: @market.view00</p></div>
-</section>
-<footer>© 2026 Sarmaal Ji Trader</footer>
+:root{--bg:#080808;--panel:#111;--gold:#d7ad55;--gold2:#f3d58b;--muted:#aaa;--line:rgba(215,173,85,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f5f2eb;font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:5;background:rgba(8,8,8,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navinner{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:1.4px}.brand span{color:var(--gold)}
+.links{display:flex;gap:28px;font-size:14px;color:#ddd}.links a:hover{color:var(--gold)}
+.hero{min-height:650px;display:grid;align-items:center;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero:before{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(215,173,85,.12);border-radius:50%;right:-130px;top:20px;box-shadow:0 0 0 55px rgba(215,173,85,.025),0 0 0 110px rgba(215,173,85,.02)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#080808 20%,rgba(8,8,8,.86) 58%,rgba(8,8,8,.4));pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:720px;padding:90px 0}
+.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px;font-weight:700}
+h1{font-size:clamp(42px,7vw,78px);line-height:1.04;margin:18px 0 20px;letter-spacing:-2px}
+h1 span{color:var(--gold2)}.lead{font-size:19px;color:#c8c4bb;max-width:600px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.btn{padding:13px 22px;border:1px solid var(--gold);border-radius:4px;font-weight:700;font-size:14px;display:inline-block;transition:.2s}
+.btn.primary{background:var(--gold);color:#111}.btn:hover{transform:translateY(-2px);background:var(--gold2);color:#111}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:56px;max-width:620px}
+.stat{border-left:2px solid var(--gold);padding:5px 0 5px 16px}.stat strong{display:block;font-size:25px;color:var(--gold2)}.stat small{color:var(--muted);letter-spacing:1px;text-transform:uppercase;font-size:10px}
+section{padding:88px 0}.section-tag{color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
+h2{font-size:clamp(30px,4vw,44px);margin:10px 0 16px;line-height:1.15}.sub{color:var(--muted);max-width:680px}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+.panel{background:linear-gradient(145deg,#171717,#0d0d0d);border:1px solid var(--line);padding:30px;border-radius:8px}
+.quote{font-size:22px;color:var(--gold2);font-weight:600;line-height:1.4}
+.market-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.market{padding:28px;border:1px solid var(--line);background:#101010;border-radius:7px;min-height:180px}
+.market .num{color:var(--gold);font-size:12px;letter-spacing:2px}.market h3{font-size:23px;margin:18px 0 8px}.market p{color:var(--muted);font-size:14px;margin:0}
+.note{margin-top:26px;padding:18px 20px;border-left:2px solid var(--gold);background:#111;color:#bdb8ad;font-size:13px}
+.contact{background:linear-gradient(135deg,#15120b,#0b0b0b);border:1px solid var(--line);padding:42px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.contact p{color:var(--muted);margin-bottom:0}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#8c887f;font-size:12px}
+.footerinner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:700px){.links{gap:13px;font-size:12px}.hero{min-height:600px}.stats{gap:8px}.stat strong{font-size:21px}.about-grid{grid-template-columns:1fr;gap:28px}.market-grid{grid-template-columns:1fr}.contact{display:block;padding:28px}.contact .btn{margin-top:22px}section{padding:65px 0}}
+@media(max-width:430px){.links a:nth-child(2){display:none}.navinner{height:64px}.brand{font-size:13px}.lead{font-size:16px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap navinner">
+  <a class="brand" href="#home">SARMAAL JI <span>TRADER</span></a>
+  <div class="links"><a href="#home">Home</a><a href="#about">About Me</a><a href="#markets">Markets</a><a href="#contact">Contact</a></div>
+</div></nav>
+<header class="hero" id="home"><div class="wrap"><div class="hero-content">
+  <div class="eyebrow">Discipline · Analysis · Consistency</div>
+  <h1>Trade with a plan.<br><span>Grow with knowledge.</span></h1>
+  <p class="lead">Rahul Kumar | Professional Stock Market Trader. Sharing my trading journey and market interests across NIFTY, BANK NIFTY and Crypto.</p>
+  <div class="actions"><a class="btn primary" href="#about">Discover My Journey</a><a class="btn" href="https://www.instagram.com/sarmaalji/" target="_blank" rel="noopener">Instagram ↗</a></div>
+  <div class="stats">
+    <div class="stat"><strong>5 Years</strong><small>Trading experience</small></div>
+    <div class="stat"><strong>03</strong><small>Markets followed</small></div>
+    <div class="stat"><strong>Learning</strong><small>Every market day</small></div>
+  </div>
+</div></div></header>
+<main>
+<section id="about"><div class="wrap about-grid">
+  <div><div class="section-tag">About Me</div><h2>Meet Rahul Kumar</h2>
+    <p class="sub">Welcome to Sarmaal Ji Trader. I’m Rahul Kumar, a trader with 5 years of experience and an ongoing passion for the stock market. This website is my personal space to introduce my trading journey and the markets I follow.</p>
+    <p class="sub">My focus is on learning, preparation, risk awareness and disciplined decision-making. Markets involve risk, and every trade deserves careful thought.</p>
+  </div>
+  <div class="panel"><div class="quote">“A strong trading journey is built on patience, discipline and continuous learning.”</div><p class="sub">— Sarmaal Ji Trader</p></div>
+</div></section>
+<section id="markets" style="background:#0c0c0c;border-top:1px solid rgba(215,173,85,.12);border-bottom:1px solid rgba(215,173,85,.12)"><div class="wrap">
+  <div class="section-tag">My Market Interests</div><h2>Markets I Follow</h2><p class="sub">The key markets featured in my trading journey.</p>
+  <div class="market-grid">
+    <article class="market"><div class="num">01 / INDEX</div><h3>NIFTY</h3><p>Following index movements, market structure and price action.</p></article>
+    <article class="market"><div class="num">02 / INDEX</div><h3>BANK NIFTY</h3><p>Tracking banking index trends, volatility and important levels.</p></article>
+    <article class="market"><div class="num">03 / DIGITAL ASSETS</div><h3>CRYPTO</h3><p>Exploring digital asset markets and their price behaviour.</p></article>
+  </div>
+</div></section>
+<section id="contact"><div class="wrap"><div class="contact">
+  <div><div class="section-tag">Connect With Me</div><h2>Let’s stay connected.</h2><p>Follow my journey and updates on Instagram.</p></div>
+  <a class="btn primary" href="https://www.instagram.com/sarmaalji/" target="_blank" rel="noopener">@sarmaalji ↗</a>
+</div><div class="note">Disclaimer: This website is for personal information and educational purposes only. Nothing here is investment advice or a recommendation to buy or sell any financial instrument. Trading and investing involve risk; do your own research and consult a qualified financial adviser where appropriate.</div></div></section>
+</main>
+<footer><div class="wrap footerinner"><span>© 2026 Sarmaal Ji Trader · Rahul Kumar</span><span>Built around discipline, learning & market awareness.</span></div></footer>
 </body></html>
